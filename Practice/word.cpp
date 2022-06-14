@@ -30,3 +30,5 @@ int main(){
     }
     cout << s;
 }
+
+//59A Word
