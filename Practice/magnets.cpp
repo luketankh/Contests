@@ -9,9 +9,14 @@ int main(){
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
   #endif
-    ll n;
-    int sum=0;
+    int n;
     cin >> n;
-    if (n%2 == 0) cout << n/2;
-    else cout << "-" << (n/2) + 1;
+    string s, prev;
+    int k =0;
+    while (n--){
+      cin >> s;
+      if (s != prev) k++;
+      prev = s;
+    }
+    cout << k;
 }

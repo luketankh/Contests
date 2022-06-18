@@ -9,9 +9,13 @@ int main(){
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
   #endif
-    ll n;
-    int sum=0;
-    cin >> n;
-    if (n%2 == 0) cout << n/2;
-    else cout << "-" << (n/2) + 1;
+  int n, cmax=0;
+  cin >> n;
+  while (n--){
+    int i;
+    cin >> i;
+    cmax = max(cmax,i); 
+  }
+  puts(cmax > 0 ? "HARD" : "EASY");
+  return 0;
 }
