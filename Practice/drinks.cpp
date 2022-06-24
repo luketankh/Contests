@@ -3,7 +3,6 @@
 #include <algorithm>
 #include <vector>
 #include <iomanip>
-#include <set>
 
 // typedef shortcuts 
 typedef long long ll;
@@ -18,13 +17,17 @@ int main(){
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
   #endif
-    vector <ll> v;    
-    int u = 0;
-    for (int o =0; o < 4; o++){
-      ll p;
-      cin >> p;
-      v.PB(p);
+    vector <ld> v;
+    int n;
+    cin >> n;
+    while (n--){
+      ld a=0;
+      cin >> a;
+      v.PB(a);
     }
-    set <ll> k(v.begin(), v.end());
-  cout << v.size() - k.size();
-}
+    ld sum=0;
+    for (int i = 0; i < v.size(); i++){
+      sum += v[i];
+    }
+    printf("%.12Lf\n", sum/v.size());
+} 
