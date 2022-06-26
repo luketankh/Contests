@@ -20,21 +20,25 @@ int main(){
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
   #endif
-    set <int> set;
-    vector<char> v;
-    int cas;
-    cin >> cas;
-    while(cas--){
-      char a;
-      cin >> a;
-      v.PB(a);
-    }
-    for (auto &x : v){
-      x = tolower(x);
-      x = x - '0';
-      set.insert(x);
-    }
-    if (set.size() == 26) cout << "YES";
-    else cout << "NO";
+      int arr[1001];
+  string s;
+  cin>>s;
+  int count=0;
+  for(int i=0;i<s.size();i++){
+      if(s[i]=='+'){
+          continue;
+      }else{
+          arr[count++]=s[i]-'0';
+      }
+  }
+  sort(arr,arr+count);
+  for(int i=0;i<count;i++){
+      cout<<arr[i];
+      if(i==count-1){
+          break;
+      }
+      cout<<"+";
+  }
+  return 0;
 }
 

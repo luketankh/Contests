@@ -20,21 +20,14 @@ int main(){
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
   #endif
-    set <int> set;
-    vector<char> v;
-    int cas;
-    cin >> cas;
-    while(cas--){
-      char a;
-      cin >> a;
-      v.PB(a);
+   string s;
+   set <char> set;
+   getline(cin,s,'\n');
+   for (int i =0; i < s.size(); i++){
+    if (s[i] != '{' && s[i] != '}' && s[i] != ',' && s[i] != ' '){
+      set.insert(s[i]);
     }
-    for (auto &x : v){
-      x = tolower(x);
-      x = x - '0';
-      set.insert(x);
-    }
-    if (set.size() == 26) cout << "YES";
-    else cout << "NO";
+   }
+   cout << set.size();
 }
 

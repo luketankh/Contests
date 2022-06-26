@@ -20,21 +20,16 @@ int main(){
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
   #endif
-    set <int> set;
-    vector<char> v;
     int cas;
     cin >> cas;
     while(cas--){
-      char a;
-      cin >> a;
-      v.PB(a);
-    }
-    for (auto &x : v){
-      x = tolower(x);
-      x = x - '0';
-      set.insert(x);
-    }
-    if (set.size() == 26) cout << "YES";
-    else cout << "NO";
+     ll a, b; 
+     cin >> a >> b; 
+     if (a % b == 0 ) cout << 0 << '\n';
+     else {
+      int w = a%b;
+      cout << b-w << '\n'; 
+     } 
+   }
 }
 
