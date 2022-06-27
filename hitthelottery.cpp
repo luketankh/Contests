@@ -24,7 +24,7 @@ int main(){
     int a[] = {1,5,10,20,100};
     ll n, count =0, x;
     cin >> n; 
-    x = size(a);
+    x = size(a); //why do you need to do this to return size of array?
     for (int j = x-1 ; j >= 0; j--){
       while (n >= a[j]){
         n -= a[j];
