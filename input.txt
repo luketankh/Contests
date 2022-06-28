@@ -1,5 +1,7 @@
+6
+7
+1
+2
 3
-Dodecahedron
-Octahedron
-Octahedron
-
+2000000000
+763243547
