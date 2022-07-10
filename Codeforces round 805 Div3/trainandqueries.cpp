@@ -40,6 +40,7 @@ int main(){
         mFirst[k] = i;
       }
       }
+    
     while(y--){
       int a,b;
       cin >> a >> b;
