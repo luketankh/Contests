@@ -25,24 +25,15 @@ int main(){
   #endif
     int cas;
     cin >> cas;
-    while (cas--){
-    int n;
-    vector<string> v;
-    cin >> n;
-    string c[n];
-    for (int i =0 ; i < n; i++){
-      string a;
-      cin >> a;
-      v.push_back(a);
-    }
-    for (int i = 0; i < v.size()-1; i++){
-      for (int j = i+1; j < v.size(); j++){
-        string k = c[i] + c[j];
-        if (c[i] == k) c[i] = '1';
-        else c[i] = '0';
-      }
-    }
-    for (int i = 0 ; i < n; i++) cout << c[i];
-    }
+    while(cas--){
+      string s;
+     cin >> s;
+     for (int i =0; i < s.size(); i++){
+      s[i] = tolower(s[i]);
+     }
+     cout << (s == "yes" ? "YES" : "NO") << '\n';
 }
+}
+
+
 

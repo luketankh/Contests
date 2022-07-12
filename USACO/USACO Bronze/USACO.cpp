@@ -29,18 +29,11 @@ using namespace std;
 int main() {
     ofstream fout ("ride.out");
     ifstream fin ("ride.in");
-    string a,b;
-    int k =47;
-    fin >> a >> b;
-    int asum=1, bsum=1;
-    for (int i = 0; i < a.size(); ++i){
-      asum *= a[i] - 'A' + 1;
+    int n;
+    fin >> n;
+    while (n--){
+      
     }
-    for (int j = 0; j < b.size(); ++j){
-      bsum *= b[j] - 'A' + 1;
-    }
-   fout << (asum%k == bsum%k ? "GO" : "STAY") << endl; 
-    return 0;
 }
 
 

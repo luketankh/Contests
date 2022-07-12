@@ -25,24 +25,16 @@ int main(){
   #endif
     int cas;
     cin >> cas;
-    while (cas--){
-    int n;
-    vector<string> v;
-    cin >> n;
-    string c[n];
-    for (int i =0 ; i < n; i++){
-      string a;
-      cin >> a;
-      v.push_back(a);
-    }
-    for (int i = 0; i < v.size()-1; i++){
-      for (int j = i+1; j < v.size(); j++){
-        string k = c[i] + c[j];
-        if (c[i] == k) c[i] = '1';
-        else c[i] = '0';
-      }
-    }
-    for (int i = 0 ; i < n; i++) cout << c[i];
+    while(cas--){
+      set <char> s;
+      int n;
+      cin >> n;
+      char b[n];
+      for (int i =0; i < n; i++) cin >> b[i];
+      for (int i =0; i < n; i++) s.insert(b[i]);
+      cout << (s.size()*2) + (n-s.size()) << '\n';
     }
 }
+
+// cypher
 

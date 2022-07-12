@@ -27,22 +27,26 @@ int main(){
     cin >> cas;
     while (cas--){
     int n;
-    vector<string> v;
     cin >> n;
-    string c[n];
-    for (int i =0 ; i < n; i++){
-      string a;
-      cin >> a;
-      v.push_back(a);
-    }
-    for (int i = 0; i < v.size()-1; i++){
-      for (int j = i+1; j < v.size(); j++){
-        string k = c[i] + c[j];
-        if (c[i] == k) c[i] = '1';
-        else c[i] = '0';
+    int c[n];
+    for (int i = 0; i < n; i++) cin >> c[i];
+    for (int j =0; j < n; j++){
+      int m;
+      cin >> m;
+      for (int k =0; k < m; k++){
+        char s;
+        cin >> s;
+        if (s == 'D') c[j]++;
+        else c[j]--;
       }
+     for (int j =0; j < n; j++){
+      if (c[j] <0) c[j] += 10;
+     }
+     cout << c[j]%10 << ' ';
     }
-    for (int i = 0 ; i < n; i++) cout << c[i];
+    cout << '\n';
     }
 }
+
+// cypher
 

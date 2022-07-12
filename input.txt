@@ -1,21 +1,22 @@
 3
+5
+abab
+ab
+abc
+abacb
+c
+3
+x
+xx
+xxx
+8
+codeforc
+es
+codes
+cod
+forc
+forces
+e
+code
 
-6 3
-3 7 1 5 1 4
-3 5
-1 7
-3 10
 
-3 3
-1 2 1
-2 1
-1 2
-4 5
-
-7 5
-2 1 1 1 2 4 4
-1 3
-1 4
-2 1
-4 1
-1 2
